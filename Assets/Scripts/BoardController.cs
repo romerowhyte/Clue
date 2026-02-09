@@ -37,3 +37,12 @@ public class GridManager : MonoBehaviour
 
 }
 
+
+/*TODO:     protected const int size = 200; // SIZE IN PIXELS, MIGHT NEED TO BE CHANGED TO SIZE IN UNITY?
+
+AND     // Update is called once per frame
+    public virtual void Update()
+    {
+        
+    }
+*/
