@@ -8,9 +8,8 @@ public class WallTile : Tile
         tileType = TileType.WT;
     }
 
-    // Update is called once per frame
-    void Update()
+    public override bool IsWalkable()
     {
-        
+        return false;
     }
 }
