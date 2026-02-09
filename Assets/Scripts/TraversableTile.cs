@@ -31,10 +31,10 @@ public class TraversableTile : Tile
         AsyncOperationHandle<Sprite> handle = Addressables.LoadAssetAsync<Sprite>(".../Assets/Textures/Test/TestPlayer.png");
         handle.Completed += loadSpritesWhenReady;
     }
-    
-    void Update()
-    {
-        
+
+    public override bool IsWalkable() {
+        //Doors
+        return occupiedState != OccupiedState.OCCUPIED;
     }
 
     public OccupiedState getOccupationState()
