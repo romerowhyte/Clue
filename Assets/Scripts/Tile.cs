@@ -4,25 +4,28 @@ public class Tile : MonoBehaviour
 {
     public enum TileType
     {
-        T,
-        TT,
-        WT
+        T, //Tile
+        TT, //Traversable
+        WT //Wall
+        RT //Room
     }
-    protected const int size = 200; // SIZE IN PIXELS, MIGHT NEED TO BE CHANGED TO SIZE IN UNITY?
+
     protected TileType tileType;
-    public virtual void Start()
-    {
-        tileType = TileType.T;
+    
+    //board co-ords
+    public int X {get; set; }
+    public int Y {get; set; }
+
+    //checks if occupied 
+    public bool IsOccupied {get; set; } = false;
+
+    public virtual void Start() {
+        tileType = TitleType.T;
     }
 
-    // Update is called once per frame
-    public virtual void Update()
-    {
-        
-    }
+    public abstract bool IsWalkable();
 
-    public TileType getTileType()
-    {
-        return tileType;
-    }
+    
+    public TileType GetTileType() => tileType;
 }
+
